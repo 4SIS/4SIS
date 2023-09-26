@@ -8,23 +8,29 @@ class AddClass extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('List of Classes'),
+        title: const Text('List of Classes'),
         actions: [
           IconButton(
-              onPressed: (){
+              onPressed: () {
                 //_auth.signOut();
               },
-              icon: Icon(Icons.circle_notifications, color: Colors.black)
-          )
+              icon: const Icon(Icons.circle_notifications, color: Colors.black))
         ],
       ),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Spacer(flex: 2,),
-            Image.asset('assets/images/tung.jpeg', height: 280,),
-            Spacer(flex: 7,),
+            const Spacer(
+              flex: 2,
+            ),
+            Image.asset(
+              'assets/images/tung.jpeg',
+              height: 280,
+            ),
+            Spacer(
+              flex: 7,
+            ),
           ],
         ),
       ),
