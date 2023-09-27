@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fsis/screens/add_class.dart';
 import 'package:fsis/screens/login/login_page.dart';
 
 void main() {

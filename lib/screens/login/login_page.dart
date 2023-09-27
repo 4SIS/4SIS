@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final Size screenSize = MediaQuery.of(context).size;
+
     return Column(
       children: [
         Container(
-          width: 375,
-          height: 812,
+          width: screenSize.width,
+          height: screenSize.height,
           clipBehavior: Clip.antiAlias,
           decoration: ShapeDecoration(
             color: Colors.white,
@@ -20,37 +22,41 @@ class LoginPage extends StatelessWidget {
               Positioned(
                 left: 110,
                 top: 40,
-                child: Stack(
-                  children: [
-                    Positioned(
-                      left: 37,
-                      top: 0,
-                      child: Text(
-                        'Hey there,',
-                        style: TextStyle(
-                          color: Color(0xFF1D1517),
-                          fontSize: 16,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w400,
-                          height: 0.09,
+                child: Container(
+                  width: 154,
+                  height: 59,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 37,
+                        top: 0,
+                        child: DefaultTextStyle(
+                          style: TextStyle(
+                            color: Color(0xFF1D1517),
+                            fontSize: 16,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w400,
+                            height: 0.09,
+                          ),
+                          child: Text('Hey there,'),
                         ),
                       ),
-                    ),
-                    Positioned(
-                      left: 0,
-                      top: 29,
-                      child: Text(
-                        'Welcome Back',
-                        style: TextStyle(
-                          color: Color(0xFF1D1517),
-                          fontSize: 20,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                          height: 0.07,
+                      Positioned(
+                        left: 0,
+                        top: 29,
+                        child: DefaultTextStyle(
+                          style: TextStyle(
+                            color: Color(0xFF1D1517),
+                            fontSize: 20,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w700,
+                            height: 0.07,
+                          ),
+                          child: Text('Welcome Back'),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               Positioned(
@@ -93,6 +99,7 @@ class LoginPage extends StatelessWidget {
                         left: 118,
                         top: 18,
                         child: Container(
+                          width: 79,
                           height: 24,
                           child: Stack(
                             children: [
@@ -102,22 +109,20 @@ class LoginPage extends StatelessWidget {
                                 child: Container(
                                   width: 24,
                                   height: 24,
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 2.50, vertical: 2),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+                                  child: Stack(
                                     children: [
-                                      Container(
-                                        width: 19,
-                                        height: 20,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image: NetworkImage(
-                                                "https://via.placeholder.com/19x20"),
-                                            fit: BoxFit.fill,
+                                      Positioned(
+                                        left: 2.50,
+                                        top: 2,
+                                        child: Container(
+                                          width: 19,
+                                          height: 20,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                  'assets/images/login/login.png'),
+                                              fit: BoxFit.fill,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -128,8 +133,7 @@ class LoginPage extends StatelessWidget {
                               Positioned(
                                 left: 34,
                                 top: 0,
-                                child: Text(
-                                  '로그인',
+                                child: DefaultTextStyle(
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
@@ -137,6 +141,7 @@ class LoginPage extends StatelessWidget {
                                     fontWeight: FontWeight.w700,
                                     height: 0.09,
                                   ),
+                                  child: Text('로그인'),
                                 ),
                               ),
                             ],
@@ -152,19 +157,22 @@ class LoginPage extends StatelessWidget {
                 top: 633,
                 child: Container(
                   width: 315,
+                  height: 18,
                   child: Stack(
                     children: [
                       Positioned(
                         left: 151,
                         top: 0,
-                        child: Text(
-                          'Or',
+                        child: DefaultTextStyle(
                           style: TextStyle(
                             color: Color(0xFF1D1517),
                             fontSize: 12,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w400,
                             height: 0.12,
+                          ),
+                          child: Text(
+                            'Or',
                           ),
                         ),
                       ),
@@ -173,36 +181,34 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 93,
-                top: 751,
-                child: Text.rich(
-                  TextSpan(
-                    children: [
+                  left: 93,
+                  top: 751,
+                  child: DefaultTextStyle(
+                    style: TextStyle(
+                      color: Color(0xFF1D1517),
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w400,
+                      height: 0.11,
+                    ),
+                    child: Text.rich(
                       TextSpan(
-                        text: '계정이 아직 없으신가요? ',
-                        style: TextStyle(
-                          color: Color(0xFF1D1517),
-                          fontSize: 14,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w400,
-                          height: 0.11,
-                        ),
+                        children: [
+                          TextSpan(
+                            text: '계정이 아직 없으신가요? ',
+                          ),
+                          TextSpan(
+                            text: '회원가입',
+                            style: TextStyle(
+                              color: Color(0xFF3F4864),
+                              fontWeight: FontWeight.w500,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                        ],
                       ),
-                      TextSpan(
-                        text: '회원가입',
-                        style: TextStyle(
-                          color: Color(0xFF3F4864),
-                          fontSize: 14,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w500,
-                          decoration: TextDecoration.underline,
-                          height: 0.11,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+                    ),
+                  )),
               Positioned(
                 left: 123,
                 top: 671,
@@ -243,8 +249,8 @@ class LoginPage extends StatelessWidget {
                                   height: 20,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
-                                      image: NetworkImage(
-                                          "https://via.placeholder.com/20x20"),
+                                      image: AssetImage(
+                                          "assets/images/login/google.png"),
                                       fit: BoxFit.fill,
                                     ),
                                   ),
@@ -286,32 +292,30 @@ class LoginPage extends StatelessWidget {
                                   height: 24,
                                   clipBehavior: Clip.antiAlias,
                                   decoration: BoxDecoration(),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+                                  child: Stack(
                                     children: [
-                                      Expanded(
+                                      Positioned(
+                                        left: 0,
+                                        top: 0,
                                         child: Container(
-                                          height: double.infinity,
+                                          width: 24,
+                                          height: 24,
                                           clipBehavior: Clip.antiAlias,
                                           decoration: BoxDecoration(),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
+                                          child: Stack(
                                             children: [
-                                              Container(
-                                                width: 24,
-                                                height: 24,
-                                                decoration: BoxDecoration(
-                                                  image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        "https://via.placeholder.com/24x24"),
-                                                    fit: BoxFit.fill,
+                                              Positioned(
+                                                left: 0,
+                                                top: 0,
+                                                child: Container(
+                                                  width: 24,
+                                                  height: 24,
+                                                  decoration: BoxDecoration(
+                                                    image: DecorationImage(
+                                                      image: AssetImage(
+                                                          "assets/images/login/kakaotalk.png"),
+                                                      fit: BoxFit.fill,
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -340,20 +344,21 @@ class LoginPage extends StatelessWidget {
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 97,
-                        top: 121,
-                        child: Text(
-                          '비밀번호를 잊으셨나요?',
-                          style: TextStyle(
-                            color: Color(0xFFACA3A5),
-                            fontSize: 12,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            decoration: TextDecoration.underline,
-                            height: 0.12,
-                          ),
-                        ),
-                      ),
+                          left: 97,
+                          top: 121,
+                          child: DefaultTextStyle(
+                            style: TextStyle(
+                              color: Color(0xFFACA3A5),
+                              fontSize: 12,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w500,
+                              decoration: TextDecoration.underline,
+                              height: 0.12,
+                            ),
+                            child: Text(
+                              '비밀번호를 잊으셨나요?',
+                            ),
+                          )),
                       Positioned(
                         left: 0,
                         top: 0,
@@ -382,6 +387,7 @@ class LoginPage extends StatelessWidget {
                                 left: 15,
                                 top: 15,
                                 child: Container(
+                                  width: 61,
                                   height: 18,
                                   child: Stack(
                                     children: [
@@ -391,37 +397,38 @@ class LoginPage extends StatelessWidget {
                                         child: Container(
                                           width: 18,
                                           height: 18,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 1.50, vertical: 2.25),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
+                                          child: Stack(
                                             children: [
-                                              Container(
-                                                width: 15,
-                                                height: 13.50,
+                                              Positioned(
+                                                left: 1.50,
+                                                top: 2.25,
+                                                child: Container(
+                                                  width: 15,
+                                                  height: 13.50,
+                                                  child: Stack(children: [
+                                                    Container(),
+                                                  ]),
+                                                ),
                                               ),
                                             ],
                                           ),
                                         ),
                                       ),
                                       Positioned(
-                                        left: 28,
-                                        top: 0,
-                                        child: Text(
-                                          'Email',
-                                          style: TextStyle(
-                                            color: Color(0xFFACA3A5),
-                                            fontSize: 12,
-                                            fontFamily: 'Poppins',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0.12,
-                                          ),
-                                        ),
-                                      ),
+                                          left: 28,
+                                          top: 0,
+                                          child: DefaultTextStyle(
+                                            style: TextStyle(
+                                              color: Color(0xFFACA3A5),
+                                              fontSize: 12,
+                                              fontFamily: 'Poppins',
+                                              fontWeight: FontWeight.w400,
+                                              height: 0.12,
+                                            ),
+                                            child: Text(
+                                              'Email',
+                                            ),
+                                          )),
                                     ],
                                   ),
                                 ),
@@ -460,21 +467,18 @@ class LoginPage extends StatelessWidget {
                                 child: Container(
                                   width: 18,
                                   height: 18,
-                                  padding: const EdgeInsets.only(
-                                    top: 3.19,
-                                    left: 2.06,
-                                    right: 2.06,
-                                    bottom: 2.98,
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+                                  child: Stack(
                                     children: [
-                                      Container(
-                                        width: 13.87,
-                                        height: 11.83,
+                                      Positioned(
+                                        left: 2.06,
+                                        top: 3.19,
+                                        child: Container(
+                                          width: 13.87,
+                                          height: 11.83,
+                                          child: Stack(children: [
+                                            Container(),
+                                          ]),
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -484,6 +488,7 @@ class LoginPage extends StatelessWidget {
                                 left: 15,
                                 top: 15,
                                 child: Container(
+                                  width: 86,
                                   height: 18,
                                   child: Stack(
                                     children: [
@@ -493,41 +498,38 @@ class LoginPage extends StatelessWidget {
                                         child: Container(
                                           width: 18,
                                           height: 18,
-                                          padding: const EdgeInsets.only(
-                                            top: 2.06,
-                                            left: 3.19,
-                                            right: 3.39,
-                                            bottom: 2.06,
-                                          ),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
+                                          child: Stack(
                                             children: [
-                                              Container(
-                                                width: 11.42,
-                                                height: 13.87,
+                                              Positioned(
+                                                left: 3.19,
+                                                top: 2.06,
+                                                child: Container(
+                                                  width: 11.42,
+                                                  height: 13.87,
+                                                  child: Stack(children: [
+                                                    Container(),
+                                                  ]),
+                                                ),
                                               ),
                                             ],
                                           ),
                                         ),
                                       ),
                                       Positioned(
-                                        left: 28,
-                                        top: 0,
-                                        child: Text(
-                                          'Password',
-                                          style: TextStyle(
-                                            color: Color(0xFFACA3A5),
-                                            fontSize: 12,
-                                            fontFamily: 'Poppins',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0.12,
-                                          ),
-                                        ),
-                                      ),
+                                          left: 28,
+                                          top: 0,
+                                          child: DefaultTextStyle(
+                                            style: TextStyle(
+                                              color: Color(0xFFACA3A5),
+                                              fontSize: 12,
+                                              fontFamily: 'Poppins',
+                                              fontWeight: FontWeight.w400,
+                                              height: 0.12,
+                                            ),
+                                            child: Text(
+                                              'Password',
+                                            ),
+                                          )),
                                     ],
                                   ),
                                 ),
