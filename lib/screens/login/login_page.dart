@@ -20,8 +20,8 @@ class LoginPage extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                left: 110,
-                top: 40,
+                left: screenSize.width / 2 - 77, // Adjusted left position,
+                top: screenSize.height / 5 - 100, // Adjusted top position,
                 child: Container(
                   width: 154,
                   height: 59,
@@ -60,8 +60,8 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 30,
-                top: 553,
+                left: screenSize.width / 2 - 157.5, // 가로 가운데 정렬을 위한 조정
+                top: screenSize.height / 1.65, // 원하는 높이로 조정
                 child: Container(
                   width: 315,
                   height: 60,
@@ -97,7 +97,7 @@ class LoginPage extends StatelessWidget {
                       ),
                       Positioned(
                         left: 118,
-                        top: 18,
+                        top: 20,
                         child: Container(
                           width: 79,
                           height: 24,
@@ -113,7 +113,7 @@ class LoginPage extends StatelessWidget {
                                     children: [
                                       Positioned(
                                         left: 2.50,
-                                        top: 2,
+                                        top: 0,
                                         child: Container(
                                           width: 19,
                                           height: 20,
@@ -132,7 +132,7 @@ class LoginPage extends StatelessWidget {
                               ),
                               Positioned(
                                 left: 34,
-                                top: 0,
+                                top: 15,
                                 child: DefaultTextStyle(
                                   style: TextStyle(
                                     color: Colors.white,

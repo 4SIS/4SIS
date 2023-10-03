@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		m3/2rIWHzezd4ccHnASvZz4yshg=
+		jvFmN1iiBHLOlXn1JO5M9vs6PSU=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		/DlDL8DORupArKeerBKryiFHkTY=
+		nlS6ztshe5o2UptnMfbKQCqJXBU=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -24,9 +24,29 @@
 		<data>
 		VB8Dttzwsjh2PlaYIOq39lCtM9o=
 		</data>
+		<key>flutter_assets/assets/images/login/email.png</key>
+		<data>
+		+mUFdeGKmu5233jPc89nWOsTQf0=
+		</data>
+		<key>flutter_assets/assets/images/login/google.png</key>
+		<data>
+		kwRNnJuZraxf3UboTIaOsmrJ1wc=
+		</data>
+		<key>flutter_assets/assets/images/login/hide_password.png</key>
+		<data>
+		s/1WOijAbaUTK2Tiuqvd+c69opw=
+		</data>
+		<key>flutter_assets/assets/images/login/kakaotalk.png</key>
+		<data>
+		O2Z5zEGmT98KugxEYHvz/YtfFfg=
+		</data>
 		<key>flutter_assets/assets/images/login/login.png</key>
 		<data>
 		4MDyDJrB4aBvDrTiA/k72rU9NyA=
+		</data>
+		<key>flutter_assets/assets/images/login/password.png</key>
+		<data>
+		7s6DcHCEoOmwmMehluhKX9LQb18=
 		</data>
 		<key>flutter_assets/assets/images/tung.jpeg</key>
 		<data>
@@ -42,7 +62,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		CT9wy+bRGmgjSNaL0eJRFLb/PAU=
+		1q4cYDbyBF0FMyBkKDEWe1xDVc0=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -63,14 +83,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eRnjH4mhODmEru9aUGvvTAbexqAgaKSn+jRGDv/aVzo=
+			AbCG87X5MhWZF5CIrd0cLyVt2gUtnQyptjFhDOKNyOM=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HvpQJYCv8lk3yLesa5kTN3ZuhtscXOdRvvAi65Ybvys=
+			Ki0dDOTbsuQyLsb6T59bFsP10U6RPogmEPuRA8UvzNA=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -87,11 +107,46 @@
 			4PYeqQdNPbZ/ev3bV41pKJqkRybMiZfqKtOtxp7xBX4=
 			</data>
 		</dict>
+		<key>flutter_assets/assets/images/login/email.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6ODPRJ2Mo2lWZEJ0RBCLja8vA//zlM18kLcAXWg2NtE=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/login/google.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ryZTEr65PRnLfPwgy2lmZ0O41QiOqw3SZHQLYaW9Cbs=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/login/hide_password.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nEivPaMg/Jt+rXRAaEVT9vT7Mtni1RdO9f4kUNXdRQg=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/login/kakaotalk.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Z+y2qJdCROxCp4hB9oC8bwwVz3PinQVss3y92enFB7o=
+			</data>
+		</dict>
 		<key>flutter_assets/assets/images/login/login.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			MuXzxNcIhM/qQgwSeN4S+l39l9dfZJOog36ORGWpf1E=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/login/password.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Y5mvcGNkdKZWuiR+9Ehh2sEEpIQbeZXw2SGc+zeHZaM=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/tung.jpeg</key>
@@ -119,7 +174,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qwaF7hKu67XVbObjBC5YMWxvMlLk7++tYQSxFGD2ziw=
+			FAHhGtkLGuK8adGFv6tFY0yJnNmlh4aGLBk9HxhnNg0=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
