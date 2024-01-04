@@ -1,6 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  void signUp() async {
+    try {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      ); // User registered successfully
+    } catch (e) {
+      // Handle error
+      print("Error during sign up: $e");
+    }
+  }
+
+  void signIn() async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      ); // User signed in successfully
+    } catch (e) {
+      // Handle error
+      print("Error during sign in: $e");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
@@ -549,3 +582,57 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
+/*
+          // Email input
+          Positioned(
+            left: 15,
+            top: 15,
+            child: Container(
+              width: 280,
+              height: 48,
+              child: TextField(
+                controller: emailController,
+                decoration: InputDecoration(
+                  hintText: 'Email',
+                ),
+              ),
+            ),
+          ),
+
+          // Password input
+          Positioned(
+            left: 15,
+            top: 78,
+            child: Container(
+              width: 280,
+              height: 48,
+              child: TextField(
+                controller: passwordController,
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: 'Password',
+                ),
+              ),
+            ),
+          ),
+          // Sign Up button
+          Positioned(
+            left: 30,
+            top: 250,
+            child: ElevatedButton(
+              onPressed: signUp,
+              child: Text('Sign Up'),
+            ),
+          ),
+
+          // Sign In button
+          Positioned(
+            left: 130,
+            top: 250,
+            child: ElevatedButton(
+              onPressed: signIn,
+              child: Text('Sign In'),
+            ),
+          ),
+*/
