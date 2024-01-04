@@ -1,8 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:fsis/screens/add_class.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:fsis/firebase_options.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(MyApp());
+}
+
+void signUp(String email, String password) async {
+  try {
+    await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: email,
+      password: password,
+    ); //user registered successfully
+  } catch (e) { //error
+  }
+}
+
+void signIn(String email, String password) async {
+  try {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    ); //user signed in successfully
+  } catch (e) { //error
+  }
 }
 
 class MyApp extends StatelessWidget {
