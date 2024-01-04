@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		i3IfIAfpSCeT+XLwI7BkFzUcY3g=
+		ZxH5pfkOfeWguVFYdKNhgZ48J9U=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,15 +54,15 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		mw0jfe5Ey/+l3OIBYyY65sH3eOk=
+		Pj1oyQxkbEFtB8NfQzYnrGDO3Mk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
-		ApFw3/8ss6CmYsSJ+U2dLywaQEc=
+		jvFmN1iiBHLOlXn1JO5M9vs6PSU=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		0Lz1YtWsvVbDcgGjBsnzat1wXUY=
+		nlS6ztshe5o2UptnMfbKQCqJXBU=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -71,6 +71,30 @@
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
 		g2DoLKRhNmxaWgK9RxqXJUOmSyE=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/email.png</key>
+		<data>
+		+mUFdeGKmu5233jPc89nWOsTQf0=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/google.png</key>
+		<data>
+		kwRNnJuZraxf3UboTIaOsmrJ1wc=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/hide_password.png</key>
+		<data>
+		s/1WOijAbaUTK2Tiuqvd+c69opw=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/kakaotalk.png</key>
+		<data>
+		O2Z5zEGmT98KugxEYHvz/YtfFfg=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/login.png</key>
+		<data>
+		4MDyDJrB4aBvDrTiA/k72rU9NyA=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/password.png</key>
+		<data>
+		7s6DcHCEoOmwmMehluhKX9LQb18=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/tung.jpeg</key>
 		<data>
@@ -86,7 +110,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		Eu1rOOz5HZkE/g6XBnk9Sc3gjQA=
+		Vbjj82vwLA8cth3Gw0zj9HkGOlM=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -102,7 +126,7 @@
 		</data>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<data>
-		Wn1/s8cZh/PeKAjJoVaMPRkrMoM=
+		OmCqFRwXn067H2aaD9MRxphlMIY=
 		</data>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
 		<data>
@@ -114,7 +138,7 @@
 		</data>
 		<key>Frameworks/FirebaseAppCheckInterop.framework/FirebaseAppCheckInterop</key>
 		<data>
-		B7eu4sAst0XtS5N/SKXSXRmSE/o=
+		VMXdlsOBA52P+3BdHqTs8ZPqiiU=
 		</data>
 		<key>Frameworks/FirebaseAppCheckInterop.framework/Info.plist</key>
 		<data>
@@ -126,7 +150,7 @@
 		</data>
 		<key>Frameworks/FirebaseAuth.framework/FirebaseAuth</key>
 		<data>
-		Xiibx5DHVrWPp0yQMdab5v7teXU=
+		lGzylzOARV8wiFKxRttj123J3pk=
 		</data>
 		<key>Frameworks/FirebaseAuth.framework/Info.plist</key>
 		<data>
@@ -138,7 +162,7 @@
 		</data>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<data>
-		jd++6A8PiDAu0zbOHLv3LnfAjoU=
+		lH3Hu4+t3+w+rYdcJQvQtA3Sa3c=
 		</data>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<data>
@@ -150,7 +174,7 @@
 		</data>
 		<key>Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal</key>
 		<data>
-		DMLm+EAmjam5cIgTEj6RA1y22Kk=
+		HubQ8OeggkyScjZLLji9dVTdCK8=
 		</data>
 		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
 		<data>
@@ -246,7 +270,7 @@
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
 		<data>
-		va1cgf/sEJ+ouwlU5kIorFHhTK0=
+		9D9JuVHFEIAOdbWJFnJFkWxmtF0=
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
 		<data>
@@ -258,7 +282,7 @@
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
 		<data>
-		F2q4i80iYS+eszOSbttAX8m9NY4=
+		umsafgdKGkv2okS9brUVe5q2VSg=
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
 		<data>
@@ -274,7 +298,7 @@
 		</data>
 		<key>Frameworks/RecaptchaInterop.framework/RecaptchaInterop</key>
 		<data>
-		ksUOVyzoEu4ESyjTtHEFanC+wGg=
+		4WGdAP8zIB8sfwxIf4sAMZyDBTU=
 		</data>
 		<key>Frameworks/RecaptchaInterop.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -369,7 +393,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xdL+gnHWcaC1Z6rZct74s7gFgoFX+I24YbLlC39rOIk=
+			uFfxZH2/YsRbg8k2DiLbCW34DRiLCxLYw2dabsX0spI=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -383,21 +407,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KQkniwmIBK7GWxJBYi2r+Mzv6WAL57LFZxxiRNJ9PtQ=
+			LPP2homj7PcaCFdRxDAhyH3EHZYvECmmj4DIbGlRQ20=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EQ5SsZBFQW9zn6Nfi0bxbKIlzqx6Pi6uSd/d+dKXJiQ=
+			AbCG87X5MhWZF5CIrd0cLyVt2gUtnQyptjFhDOKNyOM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2xRwqQJCVZRMOwFG9biKMp6EnPqdOd6urJ4qjpUbxko=
+			Ki0dDOTbsuQyLsb6T59bFsP10U6RPogmEPuRA8UvzNA=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -412,6 +436,48 @@
 			<key>hash2</key>
 			<data>
 			/kVDBC3BIN423Lzz+oz1qNZHJ/2O73bbLx3geM1yN4c=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/email.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6ODPRJ2Mo2lWZEJ0RBCLja8vA//zlM18kLcAXWg2NtE=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/google.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ryZTEr65PRnLfPwgy2lmZ0O41QiOqw3SZHQLYaW9Cbs=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/hide_password.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nEivPaMg/Jt+rXRAaEVT9vT7Mtni1RdO9f4kUNXdRQg=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/kakaotalk.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Z+y2qJdCROxCp4hB9oC8bwwVz3PinQVss3y92enFB7o=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/login.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MuXzxNcIhM/qQgwSeN4S+l39l9dfZJOog36ORGWpf1E=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/login/password.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Y5mvcGNkdKZWuiR+9Ehh2sEEpIQbeZXw2SGc+zeHZaM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/tung.jpeg</key>
@@ -439,7 +505,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tBmm3zHad4hOGkTV05XmqSriMz++9HHkOLdiMK9dS4U=
+			DRBpzWhtk+2QKpSfDEGnI7Bb2mf+bfsv+aigg/y9JN4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -467,7 +533,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hFI47btCh0NqbLiG2MOj+F0Ral/CqOKyFFgLxAZBzPQ=
+			vhsH3DldvEVaBTUQuArN/3iky7VLWNw8cfLUtbzvNqk=
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
@@ -488,7 +554,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vsw/hW8i3VSBnYzLOtzrPE8fCx/xiemc3/l/Lr+UHqg=
+			oznRHew3g3vDDINEV/pE/bjiKwpNPjAa/1VAWUKPgvI=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseAppCheckInterop.framework/Info.plist</key>
@@ -509,7 +575,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/LMRb95lsmPkjx0Jx44m3/WhR3Knf1gVEP1/babjvF4=
+			mIF2dBj7ZTcLwz4Ot7KTMuVVD9Ok9/NoUr+oxEYg3Fc=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseAuth.framework/Info.plist</key>
@@ -530,7 +596,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sQDilRMuah5j1+uma9MmWfKsTmpA+tIJ1bRHvDmMIWM=
+			55iz93hxV7AF+jN95BeBWukKDJR8q/dK+SwblI5cTcM=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
@@ -551,7 +617,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KX9e9jIZ04EoB/U6YatwHsnWphZLLfUcX+7/OAppgf4=
+			/rhP949XskgIVrNJE2Q+myO9Gc3ywlOAMVjLrixee90=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreInternal.framework/Info.plist</key>
@@ -719,7 +785,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ar1YAu0cxWwDeymQl4/hR5xO1/pf+PrtiICVx6HjgEc=
+			vLWfMz/EFQV6oXGBfM4eUFnnP9QliYtJuiAuArLs+GQ=
 			</data>
 		</dict>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
@@ -740,7 +806,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZLzIj8TnFNzwRBnWSJkZw9PTn6sseSRfv3NHyac6tcc=
+			ImlnQI9fKr9t1lYDeUaJAID10Uo01C2NNqkbLa30Fe8=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
@@ -768,7 +834,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jvd+pxWJhYjBOKZWFF9N8E2JVCEbxeYZLPCt4e9y+/Y=
+			SdJ54p0KRcsSQFQ3IgvFoZJ7Ws5NcQ0QglhWSRYKVRo=
 			</data>
 		</dict>
 		<key>Frameworks/RecaptchaInterop.framework/_CodeSignature/CodeResources</key>
