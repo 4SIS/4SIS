@@ -1,0 +1,6 @@
+build/ios/Debug-iphonesimulator/Runner.app/Frameworks/grpc.framework/grpc filter=lfs diff=lfs merge=lfs -text
+[[:space:]]build/ios/Debug-iphonesimulator/FirebaseFirestoreInternal/FirebaseFirestoreInternal.framework/FirebaseFirestoreInternal filter=lfs diff=lfs merge=lfs -text
+build/ios/Debug-iphonesimulator/FirebaseFirestoreInternal/FirebaseFirestoreInternal.framework/FirebaseFirestoreInternal filter=lfs diff=lfs merge=lfs -text
+build/ios/iphonesimulator/Runner.app/Frameworks/grpc.framework/grpc filter=lfs diff=lfs merge=lfs -text
+build/ios/Debug-iphonesimulator/gRPC-Core/grpc.framework/grpc filter=lfs diff=lfs merge=lfs -text
+.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/grpc2 filter=lfs diff=lfs merge=lfs -text
