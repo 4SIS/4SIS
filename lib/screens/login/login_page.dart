@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fsis/screens/main_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -28,6 +29,7 @@ class _LoginPageState extends State<LoginPage> {
         email: emailController.text,
         password: passwordController.text,
       ); // User signed in successfully
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage())); //navigate to main page after successfully log in
     } catch (e) {
       // Handle error
       print("Error during sign in: $e");
@@ -166,17 +168,21 @@ class _LoginPageState extends State<LoginPage> {
                               Positioned(
                                 left: 34,
                                 top: 15,
-                                child: DefaultTextStyle(
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.w700,
-                                    height: 0.09,
+                                child: GestureDetector(
+                                  onTap: signIn,
+                                  child: DefaultTextStyle(
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.w700,
+                                      height: 0.09,
+                                    ),
+                                    child: Text('로그인'),
                                   ),
-                                  child: Text('로그인'),
                                 ),
                               ),
+
                             ],
                           ),
                         ),

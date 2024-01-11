@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fsis/screens/profile_page.dart';
 
+import 'add_class.dart';
+
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -54,7 +56,9 @@ class MainPage extends StatelessWidget {
         width: 65.0,
         child: FittedBox(
           child: FloatingActionButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AddClass())); // Replace '/profile' with your actual profile page route
+            },
             child: Icon(
               Icons.add,
               color: Colors.white,

@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:fsis/screens/profile_page.dart';
+import 'package:fsis/screens/main_page.dart';
 
-class AddClass extends StatelessWidget {
+class AddClass extends StatefulWidget {
   const AddClass({Key? key}) : super(key: key);
+
+  @override
+  _AddClassState createState() => _AddClassState();
+}
+
+class _AddClassState extends State<AddClass> {
+  // You can use controllers to get the text input from TextFormField widgets
+  final TextEditingController _classNameController = TextEditingController();
+  final TextEditingController _studentNameController = TextEditingController();
+  final TextEditingController _ageController = TextEditingController();
+  final TextEditingController _courseController = TextEditingController();
+  final TextEditingController _numberOfClassesController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +24,82 @@ class AddClass extends StatelessWidget {
         title: const Text('STUDULER'),
         actions: [
           IconButton(
-              onPressed: () {
-                //_auth.signOut();
-              },
-              icon: const Icon(Icons.circle_notifications, color: Colors.black))
+            onPressed: () {
+              //_auth.signOut();
+            },
+            icon: const Icon(Icons.circle_notifications, color: Colors.black),
+          )
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16.0),
+              child: Text(
+                '수업 추가하기',
+                style: TextStyle(
+                  fontSize: 25.0,
+                  fontFamily: 'Inter',
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            buildInputField('수업명', _classNameController),
+            buildInputField('학생 이름', _studentNameController),
+            buildInputField('학생 나이', _ageController),
+            buildInputField('과목', _courseController),
+            buildInputField('수업 회차', _numberOfClassesController),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    // Handle cancel button click
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage())); // Replace '/profile' with your actual profile page route
+                  },
+                  child: const Text('Cancel'),
+                ),
+                const SizedBox(width: 16.0),
+                ElevatedButton(
+                  onPressed: () {
+                    // Handle finish button click
+                    // You can access the entered values using _classNameController.text, _studentNameController.text, etc.
+                  },
+                  child: const Text('Finish'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildInputField(String labelText, TextEditingController controller) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            labelText,
+            style: TextStyle(
+              fontSize: 16.0,
+              fontFamily: 'Inter',
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          TextFormField(
+            controller: controller,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: '$labelText',
+            ),
+          ),
         ],
       ),
     );
