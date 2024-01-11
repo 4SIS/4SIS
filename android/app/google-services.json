@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "932785227398",
+    "project_id": "eos-4sis-3c03a",
+    "storage_bucket": "eos-4sis-3c03a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932785227398:android:b672ab6cd5223471047307",
+        "android_client_info": {
+          "package_name": "com.eos.fsis"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTFjTZZO3af3v2mXm95gw-U_TusO0bjLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
