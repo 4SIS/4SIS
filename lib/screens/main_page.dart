@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fsis/screens/main_page.dart';
+import 'package:fsis/screens/profile_page.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class MainPage extends StatelessWidget {
+  const MainPage({Key? key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -60,6 +61,25 @@ class ProfilePage extends StatelessWidget {
             ),
             // elevation: 5.0,
           ),
+        ),
+      ),
+
+
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Spacer(
+              flex: 2,
+            ),
+            Image.asset(
+              'assets/images/tung.jpeg',
+              height: 280,
+            ),
+            Spacer(
+              flex: 7,
+            ),
+          ],
         ),
       ),
     );
