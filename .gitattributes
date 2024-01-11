@@ -5,3 +5,6 @@ build/ios/iphonesimulator/Runner.app/Frameworks/grpc.framework/grpc filter=lfs d
 build/ios/Debug-iphonesimulator/gRPC-Core/grpc.framework/grpc filter=lfs diff=lfs merge=lfs -text
 .idea/shelf/Uncommitted_changes_before_rebase_[Changes]/grpc2 filter=lfs diff=lfs merge=lfs -text
 build/ios/iphonesimulator/Runner.app/ filter=lfs diff=lfs merge=lfs -text
+.idea/shelf/ filter=lfs diff=lfs merge=lfs -text
+build/ios/Debug-iphonesimulator/ filter=lfs diff=lfs merge=lfs -text
+.git/lfs/objects filter=lfs diff=lfs merge=lfs -text
