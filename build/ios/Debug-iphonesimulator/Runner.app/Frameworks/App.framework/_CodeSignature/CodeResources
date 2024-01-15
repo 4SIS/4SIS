@@ -52,10 +52,6 @@
 		<data>
 		OdCCsZ8YOvSGvU64Wq15CY/9H48=
 		</data>
-		<key>flutter_assets/assets/images/profile/person.png</key>
-		<data>
-		OdCCsZ8YOvSGvU64Wq15CY/9H48=
-		</data>
 		<key>flutter_assets/assets/images/tung.jpeg</key>
 		<data>
 		govb5E2Pw8xdLvVdWkD/dcDiyho=
@@ -70,7 +66,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		9amFkiq+OlaeSJ9OKv+dCKEoZkI=
+		Sxa7VoVKvLdFR06YUXPBQoSZFTc=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -164,13 +160,6 @@
 			aQ9QFF/0B3ast9UHkpPogb0kkKQ0Pv0BCI5FbUFcIGQ=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/images/profile/person.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			aQ9QFF/0B3ast9UHkpPogb0kkKQ0Pv0BCI5FbUFcIGQ=
-			</data>
-		</dict>
 		<key>flutter_assets/assets/images/tung.jpeg</key>
 		<dict>
 			<key>hash2</key>
@@ -196,7 +185,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z1XsxIa7uRyCi8kHh3YxK5h+RJKBXqdg/AcKypz+D5E=
+			air5XAM+WaewDh7dM+yC5tEWg4M2pOPPByjOyjFrPkA=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

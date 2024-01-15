@@ -1,0 +1,1 @@
+//pop-up page of current message about payment

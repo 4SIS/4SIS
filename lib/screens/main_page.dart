@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fsis/screens/profile_page.dart';
-
-import 'add_class.dart';
+import 'package:fsis/screens/course/add_class.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);

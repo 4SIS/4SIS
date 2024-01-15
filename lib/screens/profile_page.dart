@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fsis/screens/main_page.dart';
-
 import 'package:fsis/screens/login/login_page.dart';
 
 class ProfilePage extends StatelessWidget {

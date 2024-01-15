@@ -1,5 +1,7 @@
+//teacher version
 import 'package:flutter/material.dart';
 import 'package:fsis/screens/main_page.dart';
+import 'package:fsis/screens/course/course_calendar.dart';
 
 class AddClass extends StatefulWidget {
   const AddClass({Key? key}) : super(key: key);
@@ -61,15 +63,15 @@ class _AddClassState extends State<AddClass> {
                     // Handle cancel button click
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage())); // Replace '/profile' with your actual profile page route
                   },
-                  child: const Text('Cancel'),
+                  child: const Text('취소'),
                 ),
                 const SizedBox(width: 16.0),
                 ElevatedButton(
                   onPressed: () {
                     // Handle finish button click
-                    // You can access the entered values using _classNameController.text, _studentNameController.text, etc.
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => CourseCalendar()));
                   },
-                  child: const Text('Finish'),
+                  child: const Text('완료'),
                 ),
               ],
             ),
