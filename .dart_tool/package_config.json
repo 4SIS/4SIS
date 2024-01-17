@@ -32,6 +32,24 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "cloud_firestore",
+      "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/cloud_firestore-4.14.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "cloud_firestore_platform_interface",
+      "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/cloud_firestore_platform_interface-6.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "cloud_firestore_web",
+      "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/cloud_firestore_web-3.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "collection",
       "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/collection-1.17.1",
       "packageUri": "lib/",
@@ -218,7 +236,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-01-04T15:05:59.009107Z",
+  "generated": "2024-01-11T16:23:51.376731Z",
   "generator": "pub",
   "generatorVersion": "3.0.6"
 }

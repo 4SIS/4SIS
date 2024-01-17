@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fsis/screens/course/add_class.dart';
 import 'package:fsis/screens/login/login_page.dart';
+import 'package:fsis/screens/main_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginPage(),
+      home: MainPage(),
     );
   }
 }

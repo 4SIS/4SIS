@@ -1,0 +1,1 @@
+//page that user can see all the messages he/she had received
