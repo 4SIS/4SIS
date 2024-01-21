@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fsis/screens/login/login_test.dart';
 import 'package:fsis/screens/main_page.dart';
 import 'package:fsis/screens/login/login_page.dart';
 
@@ -9,6 +10,7 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false, // Set this to false to remove the back button
         title: const Text('STUDULER'),
         actions: [
           IconButton(
@@ -58,7 +60,10 @@ class ProfilePage extends StatelessWidget {
                 // Navigate to login page
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginPage()),
+                  PageRouteBuilder(
+                    pageBuilder: (context, animation, secondaryAnimation) => LoginTest(),
+                    transitionDuration: Duration.zero, // Instant transition
+                  ),
                 );
               },
               child: Text('로그아웃'),
@@ -84,7 +89,10 @@ class ProfilePage extends StatelessWidget {
                   // Navigate to the home page
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => MainPage()),
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) => MainPage(),
+                      transitionDuration: Duration.zero, // Instant transition
+                    ),
                   );
                 },
               ),
@@ -96,7 +104,10 @@ class ProfilePage extends StatelessWidget {
                   // Navigate to the profile page
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()),
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePage(),
+                      transitionDuration: Duration.zero, // Instant transition
+                    ),
                   );
                 },
               ),

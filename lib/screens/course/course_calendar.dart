@@ -12,6 +12,7 @@ class CourseCalendar extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false, // Set this to false to remove the back button
         title: const Text('STUDULER'),
         actions: [
           IconButton(
@@ -37,7 +38,14 @@ class CourseCalendar extends StatelessWidget {
                 icon: Icon(Icons.home),
                 onPressed: () {
                   //navigate to the home page
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage())); // Replace '/profile' with your actual profile page route
+                  Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) => MainPage(),
+                      transitionDuration: Duration.zero, // Instant transition
+                    ),
+                  );
+                  //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage())); // Replace '/profile' with your actual profile page route
                 },),
               IconButton(
                 iconSize: 30.0,
@@ -45,7 +53,14 @@ class CourseCalendar extends StatelessWidget {
                 icon: Icon(Icons.person_2_rounded),
                 onPressed: () {
                   //navigate to the profile page
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ProfilePage())); // Replace '/profile' with your actual profile page route
+                  Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePage(),
+                      transitionDuration: Duration.zero, // Instant transition
+                    ),
+                  );
+                  //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ProfilePage())); // Replace '/profile' with your actual profile page route
                 },
               ),
             ],
@@ -58,7 +73,14 @@ class CourseCalendar extends StatelessWidget {
         child: FittedBox(
           child: FloatingActionButton(
             onPressed: () {
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AddClass())); // Replace '/profile' with your actual profile page route
+              Navigator.pushReplacement(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) => AddClass(),
+                  transitionDuration: Duration.zero, // Instant transition
+                ),
+              );
+              //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AddClass())); // Replace '/profile' with your actual profile page route
             },
             child: Icon(
               Icons.add,

@@ -23,6 +23,7 @@ class _AddClassState extends State<AddClass> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false, // Set this to false to remove the back button
         title: const Text('STUDULER'),
         actions: [
           IconButton(
@@ -61,7 +62,14 @@ class _AddClassState extends State<AddClass> {
                 TextButton(
                   onPressed: () {
                     // Handle cancel button click
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage())); // Replace '/profile' with your actual profile page route
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) => MainPage(),
+                        transitionDuration: Duration.zero, // Instant transition
+                      ),
+                    );
+                    //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage())); // Replace '/profile' with your actual profile page route
                   },
                   child: const Text('취소'),
                 ),
@@ -69,7 +77,14 @@ class _AddClassState extends State<AddClass> {
                 ElevatedButton(
                   onPressed: () {
                     // Handle finish button click
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => CourseCalendar()));
+                    Navigator.pushReplacement(
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) => CourseCalendar(),
+                        transitionDuration: Duration.zero, // Instant transition
+                      ),
+                    );
+                    //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => CourseCalendar()));
                   },
                   child: const Text('완료'),
                 ),
