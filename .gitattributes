@@ -11,3 +11,4 @@ build/ios/Debug-iphonesimulator/ filter=lfs diff=lfs merge=lfs -text
 build/ios filter=lfs diff=lfs merge=lfs -text
 .idea/shelf filter=lfs diff=lfs merge=lfs -text
 .git/lfs/objects/27/6e/276e7be7e1a3e29d34b4f840eb1e23d290906d62397a4d03b7bb6e699d1a60f2 filter=lfs diff=lfs merge=lfs -text
+build/ios/Debug-iphonesimulator filter=lfs diff=lfs merge=lfs -text

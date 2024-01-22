@@ -1,11 +1,10 @@
-//this screen is for calendar of each course
 import 'package:flutter/material.dart';
-import 'package:fsis/screens/profile_page.dart';
-import 'package:fsis/screens/course/add_class.dart';
-import 'package:fsis/screens/main_page.dart';
+import 'package:fsis/screens/teachers/profile_page.dart';
+import 'package:fsis/screens/teachers/course/add_class.dart';
 
-class CourseCalendar extends StatelessWidget {
-  const CourseCalendar({Key? key}) : super(key: key);
+class MainPage extends StatelessWidget {
+
+  const MainPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +44,7 @@ class CourseCalendar extends StatelessWidget {
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
+
                   //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage())); // Replace '/profile' with your actual profile page route
                 },),
               IconButton(
@@ -60,6 +60,7 @@ class CourseCalendar extends StatelessWidget {
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
+
                   //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ProfilePage())); // Replace '/profile' with your actual profile page route
                 },
               ),
@@ -80,6 +81,7 @@ class CourseCalendar extends StatelessWidget {
                   transitionDuration: Duration.zero, // Instant transition
                 ),
               );
+
               //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AddClass())); // Replace '/profile' with your actual profile page route
             },
             child: Icon(
@@ -91,8 +93,24 @@ class CourseCalendar extends StatelessWidget {
         ),
       ),
 
-      //code for calendar should be placed in here
 
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Spacer(
+              flex: 2,
+            ),
+            Image.asset(
+              'assets/images/tung.jpeg',
+              height: 280,
+            ),
+            Spacer(
+              flex: 7,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

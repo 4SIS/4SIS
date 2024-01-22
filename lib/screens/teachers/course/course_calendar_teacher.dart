@@ -1,9 +1,11 @@
+//this screen is for calendar of each course
 import 'package:flutter/material.dart';
-import 'package:fsis/screens/profile_page.dart';
-import 'package:fsis/screens/course/add_class.dart';
+import 'package:fsis/screens/teachers/profile_page_teacher.dart';
+import 'package:fsis/screens/teachers/course/add_class.dart';
+import 'package:fsis/screens/teachers/main_page_teacher.dart';
 
-class MainPage extends StatelessWidget {
-  const MainPage({Key? key}) : super(key: key);
+class CourseCalendar extends StatelessWidget {
+  const CourseCalendar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,11 +41,10 @@ class MainPage extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => MainPage(),
+                      pageBuilder: (context, animation, secondaryAnimation) => MainPageTeacher(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
-
                   //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage())); // Replace '/profile' with your actual profile page route
                 },),
               IconButton(
@@ -55,11 +56,10 @@ class MainPage extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePage(),
+                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePageTeacher(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
-
                   //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ProfilePage())); // Replace '/profile' with your actual profile page route
                 },
               ),
@@ -80,7 +80,6 @@ class MainPage extends StatelessWidget {
                   transitionDuration: Duration.zero, // Instant transition
                 ),
               );
-
               //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AddClass())); // Replace '/profile' with your actual profile page route
             },
             child: Icon(
@@ -92,24 +91,8 @@ class MainPage extends StatelessWidget {
         ),
       ),
 
+      //code for calendar should be placed in here
 
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const Spacer(
-              flex: 2,
-            ),
-            Image.asset(
-              'assets/images/tung.jpeg',
-              height: 280,
-            ),
-            Spacer(
-              flex: 7,
-            ),
-          ],
-        ),
-      ),
     );
   }
 }

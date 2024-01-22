@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fsis/screens/login/login_test.dart';
-import 'package:fsis/screens/main_page.dart';
+import 'package:fsis/screens/teachers/main_page_teacher.dart';
 import 'package:fsis/screens/login/login_page.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -90,7 +90,7 @@ class ProfilePage extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => MainPage(),
+                      pageBuilder: (context, animation, secondaryAnimation) => MainPageTeacher(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );

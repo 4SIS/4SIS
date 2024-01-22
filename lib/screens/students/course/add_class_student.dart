@@ -1,16 +1,16 @@
-//teacher version
+//student version
 import 'package:flutter/material.dart';
-import 'package:fsis/screens/main_page.dart';
-import 'package:fsis/screens/course/course_calendar.dart';
+import 'package:fsis/screens/students/course/course_calendar_student.dart';
+import 'package:fsis/screens/students/main_page_student.dart';
 
-class AddClass extends StatefulWidget {
-  const AddClass({Key? key}) : super(key: key);
+class AddClassStudent extends StatefulWidget {
+  const AddClassStudent({Key? key}) : super(key: key);
 
   @override
-  _AddClassState createState() => _AddClassState();
+  _AddClassStudentState createState() => _AddClassStudentState();
 }
 
-class _AddClassState extends State<AddClass> {
+class _AddClassStudentState extends State<AddClassStudent> {
   // You can use controllers to get the text input from TextFormField widgets
   final TextEditingController _classNameController = TextEditingController();
   final TextEditingController _studentNameController = TextEditingController();
@@ -65,7 +65,7 @@ class _AddClassState extends State<AddClass> {
                     Navigator.pushReplacement(
                       context,
                       PageRouteBuilder(
-                        pageBuilder: (context, animation, secondaryAnimation) => MainPage(),
+                        pageBuilder: (context, animation, secondaryAnimation) => MainPageStudent(),
                         transitionDuration: Duration.zero, // Instant transition
                       ),
                     );
@@ -80,7 +80,7 @@ class _AddClassState extends State<AddClass> {
                     Navigator.pushReplacement(
                       context,
                       PageRouteBuilder(
-                        pageBuilder: (context, animation, secondaryAnimation) => CourseCalendar(),
+                        pageBuilder: (context, animation, secondaryAnimation) => CourseCalendarStudent(),
                         transitionDuration: Duration.zero, // Instant transition
                       ),
                     );
