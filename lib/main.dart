@@ -5,11 +5,18 @@ import 'package:fsis/screens/login/login_test.dart';
 import 'package:fsis/screens/login/signup_test.dart';
 import 'package:fsis/screens/teachers/main_page_teacher.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
+
+import 'data/class_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(
+    create: (context) => ClassProvider(),
+    child: MyApp(),
+  ),);
 }
 
 class MyApp extends StatelessWidget {

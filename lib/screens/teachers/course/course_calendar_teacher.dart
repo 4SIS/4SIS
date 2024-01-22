@@ -3,17 +3,29 @@ import 'package:flutter/material.dart';
 import 'package:fsis/screens/teachers/profile_page_teacher.dart';
 import 'package:fsis/screens/teachers/course/add_class_teacher.dart';
 import 'package:fsis/screens/teachers/main_page_teacher.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:table_calendar/table_calendar.dart';
 
-class CourseCalendarTeacher extends StatelessWidget {
+import '../../../widgets/main_calendar.dart';
+
+class CourseCalendarTeacher extends StatefulWidget {
   const CourseCalendarTeacher({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  State<CourseCalendarTeacher> createState() => _CourseCalendarScreenState();
+}
+
+class _CourseCalendarScreenState extends State<CourseCalendarTeacher>{
+  DateTime selectedDate = DateTime.utc(
+    DateTime.now().year,
+    DateTime.now().month,
+    DateTime.now().day,
+  );
+
+  @override
+  Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        automaticallyImplyLeading: false, // Set this to false to remove the back button
         title: const Text('STUDULER'),
         actions: [
           IconButton(
@@ -39,14 +51,7 @@ class CourseCalendarTeacher extends StatelessWidget {
                 icon: Icon(Icons.home),
                 onPressed: () {
                   //navigate to the home page
-                  Navigator.pushReplacement(
-                    context,
-                    PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => MainPageTeacher(),
-                      transitionDuration: Duration.zero, // Instant transition
-                    ),
-                  );
-                  //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage())); // Replace '/profile' with your actual profile page route
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPageTeacher())); // Replace '/profile' with your actual profile page route
                 },),
               IconButton(
                 iconSize: 30.0,
@@ -54,14 +59,7 @@ class CourseCalendarTeacher extends StatelessWidget {
                 icon: Icon(Icons.person_2_rounded),
                 onPressed: () {
                   //navigate to the profile page
-                  Navigator.pushReplacement(
-                    context,
-                    PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePageTeacher(),
-                      transitionDuration: Duration.zero, // Instant transition
-                    ),
-                  );
-                  //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ProfilePage())); // Replace '/profile' with your actual profile page route
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ProfilePageTeacher())); // Replace '/profile' with your actual profile page route
                 },
               ),
             ],
@@ -74,14 +72,7 @@ class CourseCalendarTeacher extends StatelessWidget {
         child: FittedBox(
           child: FloatingActionButton(
             onPressed: () {
-              Navigator.pushReplacement(
-                context,
-                PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => AddClassTeacher(),
-                  transitionDuration: Duration.zero, // Instant transition
-                ),
-              );
-              //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AddClass())); // Replace '/profile' with your actual profile page route
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AddClassTeacher())); // Replace '/profile' with your actual profile page route
             },
             child: Icon(
               Icons.add,
@@ -93,7 +84,17 @@ class CourseCalendarTeacher extends StatelessWidget {
       ),
 
       //code for calendar should be placed in here
-
+      body: MainCalendar(
+        selectedDate: selectedDate,
+        onDaySelected: onDaySelected,
+      ),
     );
+  }
+
+  // 달력에서 날짜가 선택됐을 때 호출되는 콜백 함수
+  void onDaySelected(DateTime selectedDate, DateTime focusedDate){
+    setState( () {
+      this.selectedDate = selectedDate;
+    });
   }
 }

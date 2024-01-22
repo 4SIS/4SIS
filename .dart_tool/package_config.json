@@ -110,6 +110,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "flutter_colorpicker",
+      "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/flutter_colorpicker-0.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/flutter_lints-2.0.3",
       "packageUri": "lib/",
@@ -130,6 +136,12 @@
     {
       "name": "http_parser",
       "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/intl-0.18.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -164,6 +176,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/nested-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/path-1.8.3",
       "packageUri": "lib/",
@@ -174,6 +192,18 @@
       "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/provider-5.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "simple_gesture_detector",
+      "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/simple_gesture_detector-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "sky_engine",
@@ -206,6 +236,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "table_calendar",
+      "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/table_calendar-3.0.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///Users/badahong/.pub-cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
@@ -236,7 +272,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-01-21T16:21:13.818493Z",
+  "generated": "2024-01-22T08:36:51.435959Z",
   "generator": "pub",
   "generatorVersion": "3.0.6"
 }
