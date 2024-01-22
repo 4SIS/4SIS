@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fsis/screens/teachers/profile_page.dart';
-import 'package:fsis/screens/teachers/course/add_class.dart';
+import 'package:fsis/screens/teachers/profile_page_teacher.dart';
+import 'package:fsis/screens/teachers/course/add_class_teacher.dart';
 
-class MainPage extends StatelessWidget {
+class MainPageTeacher extends StatelessWidget {
 
-  const MainPage({Key? key}) : super(key: key);
+  const MainPageTeacher({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class MainPage extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => MainPage(),
+                      pageBuilder: (context, animation, secondaryAnimation) => MainPageTeacher(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
@@ -56,7 +56,7 @@ class MainPage extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePage(),
+                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePageTeacher(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
@@ -77,7 +77,7 @@ class MainPage extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => AddClass(),
+                  pageBuilder: (context, animation, secondaryAnimation) => AddClassTeacher(),
                   transitionDuration: Duration.zero, // Instant transition
                 ),
               );

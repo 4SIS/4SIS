@@ -3,7 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fsis/screens/login/signup_test.dart';
 
-import '../main_page.dart';
+import '../students/main_page_student.dart';
+import '../teachers/main_page_teacher.dart';
 
 class User {
   final String uid;
@@ -55,21 +56,31 @@ class _LoginTestState extends State<LoginTest> {
       );
 
       // Navigate to the welcome page or do other actions after login
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => MainPage(),
-        ),
-      );
+      if(user.isTeacher) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => MainPageTeacher(),
+          ),
+        );
+      }
+      else{
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => MainPageStudent(),
+          ),
+        );
+      }
     } catch (e) {
       // Handle login errors
-      if (e is FirebaseAuthException &&
-          (e.code == 'user-not-found' || e.code == 'wrong-password')) {
+      if(e is FirebaseAuthException && (e.code == 'wrong-password' || e.code == 'user-not-found' || e.code == 'invalid-email' || e.code == "invalid-password")) {
         // Show the login warning for user not found or wrong password
         setState(() {
           showLoginWarning = true;
         });
-      } else {
+      }
+       else {
         // For other errors, print the error to the console
         print(e.toString());
       }
@@ -194,7 +205,7 @@ class _LoginTestState extends State<LoginTest> {
                 ),
               ],
             ),*/
-            if (showLoginWarning)
+            if(showLoginWarning)
               Text(
                 'Invalid email or password.',
                 style: TextStyle(

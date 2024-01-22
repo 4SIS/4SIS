@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fsis/screens/main_page.dart';
+import 'package:fsis/screens/teachers/main_page_teacher.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
         email: emailController.text,
         password: passwordController.text,
       ); // User signed in successfully
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPage())); //navigate to main page after successfully log in
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPageTeacher())); //navigate to main page after successfully log in
     } catch (e) {
       // Handle error
       print("Error during sign in: $e");

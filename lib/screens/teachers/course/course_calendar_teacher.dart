@@ -1,11 +1,12 @@
 //this screen is for calendar of each course
 import 'package:flutter/material.dart';
 import 'package:fsis/screens/teachers/profile_page_teacher.dart';
-import 'package:fsis/screens/teachers/course/add_class.dart';
+import 'package:fsis/screens/teachers/course/add_class_teacher.dart';
 import 'package:fsis/screens/teachers/main_page_teacher.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-class CourseCalendar extends StatelessWidget {
-  const CourseCalendar({Key? key}) : super(key: key);
+class CourseCalendarTeacher extends StatelessWidget {
+  const CourseCalendarTeacher({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +77,7 @@ class CourseCalendar extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => AddClass(),
+                  pageBuilder: (context, animation, secondaryAnimation) => AddClassTeacher(),
                   transitionDuration: Duration.zero, // Instant transition
                 ),
               );

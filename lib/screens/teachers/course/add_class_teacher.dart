@@ -1,16 +1,18 @@
 //teacher version
 import 'package:flutter/material.dart';
 import 'package:fsis/screens/teachers/main_page_teacher.dart';
-import 'package:fsis/screens/teachers/course/course_calendar.dart';
+import 'package:fsis/screens/teachers/course/course_calendar_teacher.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class AddClass extends StatefulWidget {
-  const AddClass({Key? key}) : super(key: key);
+class AddClassTeacher extends StatefulWidget {
+  const AddClassTeacher({Key? key}) : super(key: key);
 
   @override
-  _AddClassState createState() => _AddClassState();
+  _AddClassTeacherState createState() => _AddClassTeacherState();
 }
 
-class _AddClassState extends State<AddClass> {
+class _AddClassTeacherState extends State<AddClassTeacher> {
   // You can use controllers to get the text input from TextFormField widgets
   final TextEditingController _classNameController = TextEditingController();
   final TextEditingController _studentNameController = TextEditingController();
@@ -18,8 +20,42 @@ class _AddClassState extends State<AddClass> {
   final TextEditingController _courseController = TextEditingController();
   final TextEditingController _numberOfClassesController = TextEditingController();
 
+  Future<void> addClassToFirestore() async {
+    try {
+      User? user = FirebaseAuth.instance.currentUser;
+      String userId = user!.uid;
+      // Reference to the 'classes' collection in Firestore
+      CollectionReference classesCollection =
+      FirebaseFirestore.instance.collection('classes');
+
+      // Add a new document with a generated ID
+      await classesCollection.add({
+        'userId': userId,
+        'className': _classNameController.text,
+        'studentName': _studentNameController.text,
+        'age': _ageController.text,
+        'course': _courseController.text,
+        'numberOfClasses': _numberOfClassesController.text,
+      });
+
+      // Handle success or navigate to another page if needed
+      Navigator.pushReplacement(
+        context,
+        PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) =>
+              CourseCalendarTeacher(),
+          transitionDuration: Duration.zero, // Instant transition
+        ),
+      );
+    } catch (e) {
+      print('Error adding class to Firestore: $e');
+      // Handle the error (show a message, log, etc.)
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -75,17 +111,7 @@ class _AddClassState extends State<AddClass> {
                 ),
                 const SizedBox(width: 16.0),
                 ElevatedButton(
-                  onPressed: () {
-                    // Handle finish button click
-                    Navigator.pushReplacement(
-                      context,
-                      PageRouteBuilder(
-                        pageBuilder: (context, animation, secondaryAnimation) => CourseCalendar(),
-                        transitionDuration: Duration.zero, // Instant transition
-                      ),
-                    );
-                    //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => CourseCalendar()));
-                  },
+                  onPressed: addClassToFirestore,
                   child: const Text('완료'),
                 ),
               ],

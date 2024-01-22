@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fsis/screens/course/add_class.dart';
+import 'package:fsis/screens/teachers/course/add_class_teacher.dart';
 import 'package:fsis/screens/login/login_page.dart';
 import 'package:fsis/screens/login/login_test.dart';
 import 'package:fsis/screens/login/signup_test.dart';
-import 'package:fsis/screens/main_page.dart';
+import 'package:fsis/screens/teachers/main_page_teacher.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {

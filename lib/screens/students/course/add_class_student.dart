@@ -12,11 +12,7 @@ class AddClassStudent extends StatefulWidget {
 
 class _AddClassStudentState extends State<AddClassStudent> {
   // You can use controllers to get the text input from TextFormField widgets
-  final TextEditingController _classNameController = TextEditingController();
-  final TextEditingController _studentNameController = TextEditingController();
-  final TextEditingController _ageController = TextEditingController();
-  final TextEditingController _courseController = TextEditingController();
-  final TextEditingController _numberOfClassesController = TextEditingController();
+  final TextEditingController _classCode = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -50,11 +46,7 @@ class _AddClassStudentState extends State<AddClassStudent> {
                 ),
               ),
             ),
-            buildInputField('수업명', _classNameController),
-            buildInputField('학생 이름', _studentNameController),
-            buildInputField('학생 나이', _ageController),
-            buildInputField('과목', _courseController),
-            buildInputField('수업 회차', _numberOfClassesController),
+            buildInputField('수업명', _classCode),
             const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,

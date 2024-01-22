@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:fsis/screens/teachers/profile_page.dart';
-import 'package:fsis/screens/teachers/course/add_class.dart';
+import 'package:fsis/screens/students/course/add_class_student.dart';
+import 'package:fsis/screens/students/profile_page_student.dart';
+import 'package:fsis/screens/teachers/profile_page_teacher.dart';
+import 'package:fsis/screens/teachers/course/add_class_teacher.dart';
 
-class MainPage extends StatelessWidget {
+class MainPageStudent extends StatelessWidget {
 
-  const MainPage({Key? key}) : super(key: key);
+  const MainPageStudent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,7 @@ class MainPage extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => MainPage(),
+                      pageBuilder: (context, animation, secondaryAnimation) => MainPageStudent(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
@@ -56,7 +58,7 @@ class MainPage extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePage(),
+                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePageStudent(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
@@ -77,7 +79,7 @@ class MainPage extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => AddClass(),
+                  pageBuilder: (context, animation, secondaryAnimation) => AddClassStudent(),
                   transitionDuration: Duration.zero, // Instant transition
                 ),
               );

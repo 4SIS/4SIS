@@ -3,8 +3,8 @@ import 'package:fsis/screens/login/login_test.dart';
 import 'package:fsis/screens/teachers/main_page_teacher.dart';
 import 'package:fsis/screens/login/login_page.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class ProfilePageTeacher extends StatelessWidget {
+  const ProfilePageTeacher({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,7 +105,7 @@ class ProfilePage extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePage(),
+                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePageTeacher(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );

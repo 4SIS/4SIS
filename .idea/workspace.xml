@@ -8,7 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ed34319-1da4-4b94-bf79-9de4a74a0611" name="Changes" comment="edit: add_class.dart &amp; main.dart">
-      <change afterPath="$PROJECT_DIR$/lib/screens/course/course_calendar.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/backend/User.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/students/course/add_class_student.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/students/course/course_calendar_student.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/students/profile_page_student.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/teachers/main_page_teacher.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/0029d9bccdca209586ee83e0999ff8bb/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0029d9bccdca209586ee83e0999ff8bb/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/0029d9bccdca209586ee83e0999ff8bb/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0029d9bccdca209586ee83e0999ff8bb/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/0029d9bccdca209586ee83e0999ff8bb/debug_ios_bundle_flutter_assets.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0029d9bccdca209586ee83e0999ff8bb/debug_ios_bundle_flutter_assets.stamp" afterDir="false" />
@@ -25,18 +29,25 @@
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseAppCheckInterop/FirebaseAppCheckInterop.framework/FirebaseAppCheckInterop" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseAppCheckInterop/FirebaseAppCheckInterop.framework/FirebaseAppCheckInterop" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/FirebaseAuth" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/FirebaseAuth" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/FirebaseCore" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/FirebaseCore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCoreExtension/FirebaseCoreExtension.framework/FirebaseCoreExtension" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCoreExtension/FirebaseCoreExtension.framework/FirebaseCoreExtension" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCoreInternal/FirebaseCoreInternal.framework/FirebaseCoreInternal" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCoreInternal/FirebaseCoreInternal.framework/FirebaseCoreInternal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCoreInternal/FirebaseCoreInternal.framework/Modules/FirebaseCoreInternal.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCoreInternal/FirebaseCoreInternal.framework/Modules/FirebaseCoreInternal.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCoreInternal/FirebaseCoreInternal.framework/Modules/FirebaseCoreInternal.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCoreInternal/FirebaseCoreInternal.framework/Modules/FirebaseCoreInternal.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCoreInternal/FirebaseCoreInternal.framework/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseCoreInternal/FirebaseCoreInternal.framework/_CodeSignature/CodeResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/FirebaseFirestore" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/FirebaseFirestore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/FirebaseFirestore.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/FirebaseFirestore.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/FirebaseFirestore.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/FirebaseFirestore.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/_CodeSignature/CodeResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseFirestoreInternal/FirebaseFirestoreInternal.framework/FirebaseFirestoreInternal" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseFirestoreInternal/FirebaseFirestoreInternal.framework/FirebaseFirestoreInternal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseSharedSwift/FirebaseSharedSwift.framework/FirebaseSharedSwift" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseSharedSwift/FirebaseSharedSwift.framework/FirebaseSharedSwift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseSharedSwift/FirebaseSharedSwift.framework/Modules/FirebaseSharedSwift.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseSharedSwift/FirebaseSharedSwift.framework/Modules/FirebaseSharedSwift.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseSharedSwift/FirebaseSharedSwift.framework/Modules/FirebaseSharedSwift.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseSharedSwift/FirebaseSharedSwift.framework/Modules/FirebaseSharedSwift.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseSharedSwift/FirebaseSharedSwift.framework/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/FirebaseSharedSwift/FirebaseSharedSwift.framework/_CodeSignature/CodeResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/GTMSessionFetcher" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/GTMSessionFetcher" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/GoogleUtilities/GoogleUtilities.framework/GoogleUtilities" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/GoogleUtilities/GoogleUtilities.framework/GoogleUtilities" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Pods_Runner.framework/Pods_Runner" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Pods_Runner.framework/Pods_Runner" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Pods_Runner.framework/_CodeSignature/CodeDirectory" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Pods_Runner.framework/_CodeSignature/CodeDirectory" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Pods_Runner.framework/_CodeSignature/CodeRequirements-1" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Pods_Runner.framework/_CodeSignature/CodeRequirements-1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/FBLPromises" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/FBLPromises" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/RecaptchaInterop/RecaptchaInterop.framework/RecaptchaInterop" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/RecaptchaInterop/RecaptchaInterop.framework/RecaptchaInterop" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/App" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/App" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/_CodeSignature/CodeResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/flutter_assets/kernel_blob.bin" afterDir="false" />
@@ -48,10 +59,8 @@
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/FirebaseFirestore.framework/FirebaseFirestore" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/FirebaseFirestore.framework/FirebaseFirestore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/FirebaseFirestoreInternal.framework/FirebaseFirestoreInternal" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/FirebaseFirestoreInternal.framework/FirebaseFirestoreInternal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/FirebaseSharedSwift.framework/FirebaseSharedSwift" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/FirebaseSharedSwift.framework/FirebaseSharedSwift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/GoogleUtilities.framework/GoogleUtilities" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/GoogleUtilities.framework/GoogleUtilities" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/RecaptchaInterop.framework/RecaptchaInterop" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/RecaptchaInterop.framework/RecaptchaInterop" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/absl.framework/absl" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/absl.framework/absl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/grpc.framework/grpc" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/grpc.framework/grpc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/grpcpp.framework/grpcpp" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/grpcpp.framework/grpcpp" afterDir="false" />
@@ -85,10 +94,8 @@
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/FirebaseCoreInternal.framework/FirebaseCoreInternal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/FirebaseFirestore.framework/FirebaseFirestore" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/FirebaseFirestore.framework/FirebaseFirestore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/FirebaseFirestoreInternal.framework/FirebaseFirestoreInternal" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/FirebaseFirestoreInternal.framework/FirebaseFirestoreInternal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/FirebaseSharedSwift.framework/FirebaseSharedSwift" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/FirebaseSharedSwift.framework/FirebaseSharedSwift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/GoogleUtilities.framework/GoogleUtilities" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/GoogleUtilities.framework/GoogleUtilities" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/RecaptchaInterop.framework/RecaptchaInterop" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/RecaptchaInterop.framework/RecaptchaInterop" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/absl.framework/absl" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/absl.framework/absl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/grpc.framework/grpc" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/grpc.framework/grpc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/grpcpp.framework/grpcpp" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/grpcpp.framework/grpcpp" afterDir="false" />
@@ -98,11 +105,14 @@
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Runner" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Runner" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/add_class.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/course/add_class.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/main_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/main_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/notify/notification.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/notify/notification.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/notify/notify_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/notify/notify_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/profile_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/course/add_class.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/teachers/course/add_class_teacher.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/course/course_calendar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/teachers/course/course_calendar_teacher.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/login/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login/login_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/login/login_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login/login_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/main_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/students/main_page_student.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/notify/notification.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/teachers/notify/notification.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/notify/notify_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/teachers/notify/notify_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/teachers/profile_page_teacher.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +142,18 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/lib/screens/teachers/notify/notification.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/login/login_test.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/teachers/notify/notify_page.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/workspace.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/login/signup_test.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/main.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/teachers/course/course_calendar_teacher.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/teachers/main_page_teacher.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/teachers/course/add_class_teacher.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/screens/teachers/profile_page_teacher.dart" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -148,16 +170,21 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/screens/students" />
     <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/screens/students" />
+      <recent name="$PROJECT_DIR$/lib/screens/student" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/screens/teachers" />
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/lib/screens/course" />
       <recent name="$PROJECT_DIR$/lib/screens/notify" />
       <recent name="$PROJECT_DIR$/assets/images/profile" />
-      <recent name="$PROJECT_DIR$/assets/images" />
     </key>
   </component>
   <component name="RunManager">

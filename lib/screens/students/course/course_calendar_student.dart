@@ -1,11 +1,14 @@
 //this screen is for calendar of each course
 import 'package:flutter/material.dart';
+import 'package:fsis/screens/students/course/add_class_student.dart';
+import 'package:fsis/screens/students/main_page_student.dart';
+import 'package:fsis/screens/students/profile_page_student.dart';
 import 'package:fsis/screens/teachers/profile_page_teacher.dart';
 import 'package:fsis/screens/teachers/course/add_class_teacher.dart';
 import 'package:fsis/screens/teachers/main_page_teacher.dart';
 
-class CourseCalendarTeacher extends StatelessWidget {
-  const CourseCalendarTeacher({Key? key}) : super(key: key);
+class CourseCalendarStudent extends StatelessWidget {
+  const CourseCalendarStudent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +44,7 @@ class CourseCalendarTeacher extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => MainPageTeacher(),
+                      pageBuilder: (context, animation, secondaryAnimation) => MainPageStudent(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
@@ -56,7 +59,7 @@ class CourseCalendarTeacher extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePageTeacher(),
+                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePageStudent(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
@@ -76,7 +79,7 @@ class CourseCalendarTeacher extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) => AddClassTeacher(),
+                  pageBuilder: (context, animation, secondaryAnimation) => AddClassStudent(),
                   transitionDuration: Duration.zero, // Instant transition
                 ),
               );

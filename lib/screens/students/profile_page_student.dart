@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fsis/screens/login/login_test.dart';
-import 'package:fsis/screens/teachers/main_page_teacher.dart';
-import 'package:fsis/screens/login/login_page.dart';
+import 'package:fsis/screens/students/main_page_student.dart';
 
-class ProfilePageTeacher extends StatelessWidget {
-  const ProfilePageTeacher({Key? key}) : super(key: key);
+class ProfilePageStudent extends StatelessWidget {
+  const ProfilePageStudent({Key? key}) : super(key: key);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +89,7 @@ class ProfilePageTeacher extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => MainPageTeacher(),
+                      pageBuilder: (context, animation, secondaryAnimation) => MainPageStudent(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
@@ -105,7 +104,7 @@ class ProfilePageTeacher extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePageTeacher(),
+                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePageStudent(),
                       transitionDuration: Duration.zero, // Instant transition
                     ),
                   );
