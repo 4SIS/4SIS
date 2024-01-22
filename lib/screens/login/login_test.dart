@@ -6,7 +6,7 @@ import 'package:fsis/screens/login/signup_test.dart';
 import '../students/main_page_student.dart';
 import '../teachers/main_page_teacher.dart';
 
-class User {
+class User{
   final String uid;
   final String email;
   final String pwd;

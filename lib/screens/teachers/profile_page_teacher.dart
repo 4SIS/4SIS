@@ -1,11 +1,49 @@
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/material.dart';
 import 'package:fsis/screens/login/login_test.dart';
 import 'package:fsis/screens/teachers/main_page_teacher.dart';
 import 'package:fsis/screens/login/login_page.dart';
 
-class ProfilePageTeacher extends StatelessWidget {
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+class ProfilePageTeacher extends StatefulWidget {
   const ProfilePageTeacher({Key? key}) : super(key: key);
 
+  @override
+  _ProfilePageTeacherState createState() => _ProfilePageTeacherState();
+}
+
+class _ProfilePageTeacherState extends State<ProfilePageTeacher> {
+  late String userName; // Variable to store the user name
+  late int size;
+
+  @override
+  void initState() {
+    super.initState();
+    fetchUserData(); // Fetch user data when the widget is created
+  }
+
+  Future<void> fetchUserData() async {
+    try {
+      firebase_auth.User? user = firebase_auth.FirebaseAuth.instance.currentUser;
+      String userId = user!.uid; // Replace with the user's ID
+      QuerySnapshot<Map<String, dynamic>> querySnapshot = await FirebaseFirestore.instance.collection('users').doc(userId).collection('classes').get();
+
+      size = querySnapshot.size;
+
+      // Fetch user data from Firestore
+      DocumentSnapshot<Map<String, dynamic>> userSnapshot =
+      await FirebaseFirestore.instance.collection('users').doc(userId).get();
+
+      // Update the UI with the user's data
+      setState(() {
+        userName = userSnapshot['name'];
+      });
+    } catch (e) {
+      // Handle errors
+      print('Error fetching user data: $e');
+    }
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -44,12 +82,12 @@ class ProfilePageTeacher extends StatelessWidget {
             ),*/
             // User Information
             Text(
-              '사용자 이름: 박근원', // Replace with actual user name
+              '사용자 이름: $userName', // Replace with actual user name
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 8),
             Text(
-              '진행 중인 수업: 5', // Replace with actual number of classes
+              '진행 중인 수업: $size', // Replace with actual number of classes
               style: TextStyle(fontSize: 18),
             ),
             SizedBox(height: 16),
