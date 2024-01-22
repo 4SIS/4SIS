@@ -8,7 +8,7 @@ class ClassModel{
   int numberOfClasses; // 주 몇회?
   int hoursPerClass;  // 한 번 할 때 몇 시간?
   List<String> daysOfWeek;  // 무슨 요일마다?
-  double hourlyRate;  // 시급
+  int hourlyRate;  // 시급
   int settlementFrequency;  // 몇회마다 정산할건지
   Color themeColor;  // 테마색
 

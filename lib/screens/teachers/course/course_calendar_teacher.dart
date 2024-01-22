@@ -51,16 +51,26 @@ class _CourseCalendarScreenState extends State<CourseCalendarTeacher>{
                 icon: Icon(Icons.home),
                 onPressed: () {
                   //navigate to the home page
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPageTeacher())); // Replace '/profile' with your actual profile page route
-                },),
+                  Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) => MainPageTeacher(),
+                      transitionDuration: Duration.zero, // Instant transition
+                    ),
+                  );                },),
               IconButton(
                 iconSize: 30.0,
                 padding: EdgeInsets.only(),
                 icon: Icon(Icons.person_2_rounded),
                 onPressed: () {
                   //navigate to the profile page
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ProfilePageTeacher())); // Replace '/profile' with your actual profile page route
-                },
+                  Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) => ProfilePageTeacher(),
+                      transitionDuration: Duration.zero, // Instant transition
+                    ),
+                  );                },
               ),
             ],
           ),
@@ -72,8 +82,13 @@ class _CourseCalendarScreenState extends State<CourseCalendarTeacher>{
         child: FittedBox(
           child: FloatingActionButton(
             onPressed: () {
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AddClassTeacher())); // Replace '/profile' with your actual profile page route
-            },
+              Navigator.pushReplacement(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) => AddClassTeacher(),
+                  transitionDuration: Duration.zero, // Instant transition
+                ),
+              );            },
             child: Icon(
               Icons.add,
               color: Colors.white,

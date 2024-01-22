@@ -34,62 +34,17 @@ class _AddClassTeacherState extends State<AddClassTeacher> {
   int _settlementFrequency = 0;
   Color _themeColor = Colors.black;
 
-  Future<void> addClassToFirestore() async {
-    try {
-      User? user = FirebaseAuth.instance.currentUser;
-      String userId = user!.uid;
-      // Reference to the 'classes' collection in Firestore
-      CollectionReference classesCollection =
-      FirebaseFirestore.instance.collection('users').doc(userId).collection('classes');
-
-      var classProvider = Provider.of<ClassProvider>(context, listen: false);
-
-      // Add a new document with a generated ID
-      await classesCollection.add({
-        //'userId': userId,
-        'className': _classNameController.text,
-        'studentName': _studentNameController.text,
-        'age': _ageController.text,
-        'course': _courseController.text,
-        'numOfClasses': _numberOfClasses,
-        'daysOfWeek': _daysOfWeek,
-        'hoursPerClass': _hoursPerClass,
-        'hourlyRate': _hourlyRateController.text,
-        'settlementFrequency': _settlementFrequency,
-        'themeColor': _themeColor.toString(),
-
-        /*className: _classNameController.text,
-        studentName: _studentNameController.text,
-        age: int.parse(_ageController.text),
-        course: _courseController.text,
-        numberOfClasses: _numberOfClasses,
-        daysOfWeek: _daysOfWeek,
-        hoursPerClass: _hoursPerClass,
-        hourlyRate: double.parse(_hourlyRateController.text),
-        settlementFrequency: _settlementFrequency,
-        themeColor: _themeColor,*/
-
-        //'numberOfClasses': _numberOfClassesController.text,
-      });
-
-      // Handle success or navigate to another page if needed
-      Navigator.pushReplacement(
-        context,
-        PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) =>
-              CourseCalendarTeacher(),
-          transitionDuration: Duration.zero, // Instant transition
-        ),
-      );
-    } catch (e) {
-      print('Error adding class to Firestore: $e');
-      // Handle the error (show a message, log, etc.)
-    }
-  }
+  /*User? user = FirebaseAuth.instance.currentUser;
+  String userId = user!.uid;
+  final CollectionReference classesCollection = FirebaseFirestore.instance.collection('users').doc(userId).collection('classes');
+*/
 
   @override
   Widget build(BuildContext context) {
     var classProvider = Provider.of<ClassProvider>(context, listen: false);
+    User? user = FirebaseAuth.instance.currentUser;
+    String userId = user!.uid;
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -106,92 +61,107 @@ class _AddClassTeacherState extends State<AddClassTeacher> {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-        Padding(
-        padding: const EdgeInsets.only(bottom: 16.0),
-        child: Text(
-          '수업 추가하기',
-          style: TextStyle(
-            fontSize: 25.0,
-            fontFamily: 'Inter',
-            fontWeight: FontWeight.bold,
-          ),
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16.0),
+              child: Text(
+                '수업 추가하기',
+                style: TextStyle(
+                  fontSize: 25.0,
+                  fontFamily: 'Inter',
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            buildInputField('수업명', _classNameController),
+            buildInputField('학생 이름', _studentNameController),
+            buildInputField('학생 나이', _ageController),
+            buildInputField('과목', _courseController),
+            WeeklyClassFrequencyPicker(
+              onSelected: (String selectedInfo) {
+                // WeeklyClassFrequencyPicker에서 전달된 값을 처리
+                // selectedInfo 형식: '주 X회, 요일1, 요일2, ...'
+                List<String> infoParts = selectedInfo.split(', ');
+                int frequency = int.parse(
+                    infoParts[0].substring(2, infoParts[0].indexOf('회')));
+                List<String> days = infoParts.sublist(1);
+
+                setState(() {
+                  _numberOfClasses = frequency;
+                  _daysOfWeek = days;
+                });
+              },
+            ),
+            ClassHoursPicker(
+              onSelected: (int selectionHours) {
+                _hoursPerClass = selectionHours;
+              },
+            ),
+            buildInputField('시급', _hourlyRateController),
+            SettlementFrequencyPicker(
+              onSelected: (int selectedFrequency) {
+                _settlementFrequency = selectedFrequency;
+              },
+            ),
+            ColorPickerWidget(
+              onSelected: (Color selectedColor) {
+                _themeColor = selectedColor;
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    onPressed: () {
+                      // Handle cancel button click
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  MainPageTeacher())); // Replace '/profile' with your actual profile page route
+                    },
+                    child: const Text('취소'),
+                  ),
+                  const SizedBox(width: 16.0),
+                  ElevatedButton(
+                    onPressed: () async {
+                      var newClass = ClassModel(
+                        className: _classNameController.text,
+                        studentName: _studentNameController.text,
+                        age: int.parse(_ageController.text),
+                        course: _courseController.text,
+                        numberOfClasses: _numberOfClasses,
+                        daysOfWeek: _daysOfWeek,
+                        hoursPerClass: _hoursPerClass,
+                        hourlyRate: int.parse(_hourlyRateController.text),
+                        settlementFrequency: _settlementFrequency,
+                        themeColor: _themeColor,
+                      );
+
+                      await classProvider.addClassToFirestore(newClass, userId);
+
+                      Navigator.pushReplacement(
+                        context,
+                        PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  CourseCalendarTeacher(),
+                          transitionDuration:
+                              Duration.zero, // Instant transition
+                        ),
+                      );
+                    },
+                    child: const Text('완료'),
+                  ),
+                ],
+              ),
+            )
+          ],
         ),
       ),
-      buildInputField('수업명', _classNameController),
-      buildInputField('학생 이름', _studentNameController),
-      buildInputField('학생 나이', _ageController),
-      buildInputField('과목', _courseController),
-      WeeklyClassFrequencyPicker(onSelected: (String selectedInfo) {
-        // WeeklyClassFrequencyPicker에서 전달된 값을 처리
-        // selectedInfo 형식: '주 X회, 요일1, 요일2, ...'
-        List<String> infoParts = selectedInfo.split(', ');
-        int frequency = int.parse(infoParts[0].substring(2, infoParts[0].indexOf('회')));
-        List<String> days = infoParts.sublist(1);
-
-        setState(() {
-          _numberOfClasses = frequency;
-          _daysOfWeek = days;
-        });
-      },
-
-      ),
-      ClassHoursPicker(
-        onSelected: (int selectionHours){
-          _hoursPerClass = selectionHours;
-        },
-      ),
-      buildInputField('시급', _hourlyRateController),
-      SettlementFrequencyPicker(
-        onSelected: (int selectedFrequency) {
-          _settlementFrequency = selectedFrequency;
-        },
-      ),
-      ColorPickerWidget(
-        onSelected: (Color selectedColor){
-          _themeColor = selectedColor;
-        },
-      ),
-      Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-              TextButton(
-              onPressed: () {
-          // Handle cancel button click
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainPageTeacher())); // Replace '/profile' with your actual profile page route
-    },
-      child: const Text('취소'),
-    ),
-    const SizedBox(width: 16.0),
-    ElevatedButton(
-    onPressed: addClassToFirestore,
-    // Handle finish button click
-    /*var newClass = ClassModel(
-    className: _classNameController.text,
-    studentName: _studentNameController.text,
-    age: int.parse(_ageController.text),
-    course: _courseController.text,
-    numberOfClasses: _numberOfClasses,
-    daysOfWeek: _daysOfWeek,
-    hoursPerClass: _hoursPerClass,
-    hourlyRate: double.parse(_hourlyRateController.text),
-    settlementFrequency: _settlementFrequency,
-    themeColor: _themeColor,
-
-    );
-
-    classProvider.addClass(newClass);*/
-    child: const Text('완료'),
-    ),
-    ],
-    ),
-    )
-    ],
-    ),
-    ),
     );
   }
 
